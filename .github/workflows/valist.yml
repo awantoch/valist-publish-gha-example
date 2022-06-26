@@ -15,5 +15,5 @@ jobs:
           private-key: ${{ secrets.VALIST_SIGNER }}
           account: acme-co
           project: test1
-          release: 1.1.2
-          files: '**'
+          release: 1.1.3
+          files: 'src'
