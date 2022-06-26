@@ -13,4 +13,4 @@ jobs:
           account: acme-co
           project: test1
           release: 1.0.7
-          files: '*'
+          files: 'README.md'
