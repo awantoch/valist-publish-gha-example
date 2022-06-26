@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - with:
+          path: './repo'
       - uses: valist-io/valist-github-action@v2.2.0
         with:
           private-key: ${{ secrets.VALIST_SIGNER }}
           account: acme-co
           project: test1
           release: 1.1.1
-          files: '**'
+          files: './repo/**'
