@@ -1,0 +1,16 @@
+name: Valist Snapshot
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: valist-io/valist-github-action@v2.2.0
+        with:
+          private-key: ${{ secrets.VALIST_SIGNER }}
+          account: acme-co
+          project: test1
+          release: 1.0.6
+          files: '**'
