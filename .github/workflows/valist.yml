@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - with:
-          path: './repo'
+        with:
+            path: './repo'
       - uses: valist-io/valist-github-action@v2.2.0
         with:
           private-key: ${{ secrets.VALIST_SIGNER }}
