@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-            path: './repo'
+            path: './'
       - uses: valist-io/valist-github-action@v2.2.0
         with:
           private-key: ${{ secrets.VALIST_SIGNER }}
           account: acme-co
           project: test1
-          release: 1.1.1
-          files: './repo/**'
+          release: 1.1.2
+          files: '**'
