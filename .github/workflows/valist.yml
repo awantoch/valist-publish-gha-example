@@ -7,6 +7,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "TIMESTAMP=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
             path: './'
