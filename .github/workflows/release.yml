@@ -17,6 +17,6 @@ jobs:
         with:
           private-key: ${{ secrets.VALIST_SIGNER }}
           account: test0987-1
-          project: go-binary
+          project: test
           release: ${{ github.ref_name }}
           path: '.'
