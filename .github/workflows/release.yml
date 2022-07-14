@@ -16,7 +16,7 @@ jobs:
       - uses: valist-io/valist-github-action@v2.3.0
         with:
           private-key: ${{ secrets.VALIST_SIGNER }}
-          account: test-0987-1
+          account: test0987-1
           project: go-binary
           release: ${{ github.ref_name }}
           path: '.'
