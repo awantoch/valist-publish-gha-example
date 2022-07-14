@@ -10,11 +10,11 @@ jobs:
       - run: echo "TIMESTAMP=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
       - uses: actions/checkout@v3
         with:
-            path: './'
+            path: '.'
       - uses: valist-io/valist-github-action@v2.3.0
         with:
           private-key: ${{ secrets.VALIST_SIGNER }}
           account: test0987-1
           project: test
           release: ${{ env.TIMESTAMP }}
-          path: './'
+          path: '.'
