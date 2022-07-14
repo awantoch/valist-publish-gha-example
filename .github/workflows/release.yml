@@ -1,0 +1,22 @@
+name: Valist Publish
+on:
+  release:
+    types: [published]
+jobs:
+  valist-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: robinraju/release-downloader@v1.3
+        with:
+          repository: "awantoch/valist-publish-gha-example"
+          latest: true
+          tarBall: true
+          zipBall: true
+          fileName: "*"
+      - uses: valist-io/valist-github-action@v2.3.0
+        with:
+          private-key: ${{ secrets.PRIVATE_KEY }}
+          account: test-0987-1
+          project: go-binary
+          release: ${{ github.ref_name }}
+          path: '**'
