@@ -19,4 +19,4 @@ jobs:
           account: test-0987-1
           project: go-binary
           release: ${{ github.ref_name }}
-          path: '**'
+          path: '.'
