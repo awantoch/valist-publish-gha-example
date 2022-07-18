@@ -20,6 +20,7 @@ jobs:
           project: test
           release: ${{ github.ref_name }}
           path: '.'
+          # this section is optional if you have a multi-platform release
           install-name: 'hello-go'
           install-darwin-amd64: './hello-darwin-amd64'
           install-darwin-arm64: './hello-darwin-arm64'
