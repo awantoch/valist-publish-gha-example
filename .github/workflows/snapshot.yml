@@ -17,4 +17,4 @@ jobs:
           account: test0987-1
           project: test
           release: ${{ env.TIMESTAMP }}
-          path: '.'
+          path: './build'
