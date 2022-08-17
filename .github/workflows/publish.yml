@@ -16,5 +16,5 @@ jobs:
           private-key: ${{ secrets.VALIST_SIGNER }}
           account: acme-co
           project: test1
-          release: ${{ env.TIMESTAMP }}
+          release: 1.1.40
           path: './build'
